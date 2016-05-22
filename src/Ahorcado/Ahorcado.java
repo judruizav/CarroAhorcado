@@ -15,10 +15,25 @@ import java.awt.event.*;
 public class Ahorcado extends JPanel implements ActionListener, KeyListener{
     private int x;
     private int y;
+    private int xMover;
+    private int xMover2;
+    private int xMoverPiernas;
+    private int yMover;
+    private int yMover2;
+    private int yMoverPiernas;
+    private Timer timer;
     
     public Ahorcado(int x, int y){
         this.x= x;
+        this.xMover=x;
+        this.xMover2=x;
+        this.xMoverPiernas=x;
         this.y= y;
+        this.yMover=y;
+        this.yMover2=y;
+        this.yMoverPiernas=y;
+        this.timer = new Timer(50,this);
+        this.timer.start();
     }
     
     @Override
@@ -28,19 +43,32 @@ public class Ahorcado extends JPanel implements ActionListener, KeyListener{
         g.drawRoundRect(20+x, 550+y, 220+x, 400+y, 150, 150);
         g.drawLine(120+x, 50+y, 120+x, 550+y);
         g.drawLine(120+x, 50+y, 350+x, 50+y);
-        g.drawLine(350+x, 50+y, 350+x, 130+y);
-        g.drawOval(300+x, 130+y, 100, 100);
-        g.drawLine(350+x, 230+y, 350+x, 400+y);
-        g.drawLine(350+x, 400+y, 250+x, 500+y);
-        g.drawLine(350+x, 400+y, 450+x, 500+y);
-        g.drawLine(320+x, 220+y, 220+x, 320+y);
-        g.drawLine(380+x, 220+y, 480+x, 320+y);
+        g.drawLine(350+x, 50+y, 350+xMover, 130+y);
+        g.drawOval(300+xMover, 130+y, 100, 100);
+       //Torso
+        g.drawLine(350+xMover, 230+y, 350+xMover2, 400+yMover);
+       //Piernas
+        //Pierna izq 
+        g.drawLine(350+xMover2, 400+yMover, 250+xMoverPiernas, 500+yMover);
+        //Pierna der
+        g.drawLine(350+xMover2, 400+yMover, 450+xMover2, 500+yMoverPiernas);
+       //Brazos
+        g.drawLine(320+xMover, 220+y, 220+xMover2, 320+yMover2);
+        g.drawLine(380+xMover, 220+y, 480+xMover, 320+yMover);
         
     }
     
     @Override
     public void actionPerformed(ActionEvent ae) {
-        
+        if(xMover<20){
+          this.xMover+=1;
+          this.xMover2+=3;
+          this.xMoverPiernas+=4;
+          this.yMover-=1;
+          this.yMover2+=1;
+          this.yMoverPiernas-=2;
+        }  
+      repaint();
     }
 
     @Override
