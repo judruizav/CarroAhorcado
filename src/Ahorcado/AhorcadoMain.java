@@ -5,17 +5,23 @@
  */
 package Ahorcado;
 
+import java.awt.Dimension;
+import javax.swing.JFrame;
+
 /**
  *
- * @author Julian
+ * @author La Formula
  */
 public class AhorcadoMain {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        JFrame frame= new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(new Dimension(600, 650));
+        frame.setResizable(false);
+        frame.setTitle("Animación Ahorcado");
+        frame.add(new Ahorcado(0,25));
+        frame.setVisible(true);
     }
-    
 }
