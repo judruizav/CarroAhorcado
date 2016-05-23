@@ -39,7 +39,7 @@ public class Ahorcado extends JPanel implements ActionListener, KeyListener{
     @Override
     protected void paintComponent(Graphics g){
         super.paintComponent(g);
-        g.setColor(Color.DARK_GRAY);
+        /*g.setColor(Color.DARK_GRAY);
         g.drawRoundRect(20+x, 550+y, 220+x, 400+y, 150, 150);
         g.drawLine(120+x, 50+y, 120+x, 550+y);
         g.drawLine(120+x, 50+y, 350+x, 50+y);
@@ -54,12 +54,50 @@ public class Ahorcado extends JPanel implements ActionListener, KeyListener{
         g.drawLine(350+xMover2, 400+yMover, 450+xMover2, 500+yMoverPiernas);
        //Brazos
         g.drawLine(320+xMover, 220+y, 220+xMover2, 320+yMover2);
-        g.drawLine(380+xMover, 220+y, 480+xMover, 320+yMover);
+        g.drawLine(380+xMover, 220+y, 480+xMover, 320+yMover);*/
+        g.setColor(Color.DARK_GRAY);
+        g.drawRoundRect(20+x, 550+y, 220+x, 400+y, 150, 150);
+        g.drawLine(120+x, 50+y, 120+x, 550+y);
+        g.drawLine(120+x, 50+y, 350+x, 50+y);
+        g.drawLine(350+x, 50+y, 350+x, 130+y);
+        g.drawOval(300+x, 130+y, 100, 100);
+       //Torso
+        g.drawLine(350+x, 230+y, 350+x, 400+y);
+       //Piernas
+        //Pierna izq 
+        g.drawLine(350+x, 400+y, 250+x, 500+y);
+        //Pierna der
+        g.drawLine(350+x, 400+y, 450+x, 500+y);
+       //Brazos
+        g.drawLine(320+x, 220+y, 220+x, 320+y);
+        g.drawLine(380+x, 220+y, 480+x, 320+y);
+        
+        //+30y Grados dibujo
+        g.setColor(Color.DARK_GRAY);
+        //Soga
+        g.drawLine(350+x, 50+y, 398+x, 128+y);
+        //Face
+        g.drawOval(370+x, 120+y, 100, 100);
+       //Torso
+        g.drawLine(450+x, 210+y, 540+x, 350+y);
+       //Piernas
+        //Pierna izq 
+        g.drawLine(540+x, 350+y, 500+x, 490+y);
+        //Pierna der
+        g.drawLine(540+x, 350+y, 450+x, 500+y);
+       //Brazo Izquierdo
+        g.drawLine(420+x, 220+y, 395+x, 355+y);
+        //Brazo Derecho
+        g.drawLine(470+x, 180+y, 600+x, 225+y);
         
     }
     
     @Override
     public void actionPerformed(ActionEvent ae) {
+        switch(xMover){
+            
+        }
+        
         if(xMover<20){
           this.xMover+=1;
           this.xMover2+=3;
