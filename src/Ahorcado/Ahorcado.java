@@ -67,8 +67,15 @@ public class Ahorcado extends JPanel implements ActionListener, KeyListener{
           this.yMover-=1;
           this.yMover2+=1;
           this.yMoverPiernas-=2;
-        }  
-      repaint();
+        }
+        if(xMover>(-40)){
+          this.xMover-=2;
+          this.xMover2-=2;
+          this.yMover-=2;
+          this.yMover2-=2;
+          this.yMoverPiernas-=3;
+        }
+        repaint();
     }
 
     @Override
