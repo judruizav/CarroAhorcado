@@ -49,6 +49,7 @@ public class Carro extends JPanel implements ActionListener, KeyListener{
         g.setFont(new Font("Calibri", Font.BOLD, 14));
         g.drawString("Flecha arriba:Aumentar velocidad    Flecha Abajo:Disminuir velocidad", 0, 15);
         g.drawString("Enter:Pausar animación  Liberar enter: Continuar animación", 0, 35);
+          g.drawString("Velocidad=" + this.velocidad, 0, 55);
     }
     
     @Override
