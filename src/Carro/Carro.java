@@ -1,19 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Carro;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+
 /**
  *
- * @author Estudiante
+ * @author La Formula
  */
+
 public class Carro extends JPanel implements ActionListener, KeyListener{
     private Timer timer;
     private int x=0;
@@ -49,7 +48,7 @@ public class Carro extends JPanel implements ActionListener, KeyListener{
         g.setFont(new Font("Calibri", Font.BOLD, 14));
         g.drawString("Flecha arriba:Aumentar velocidad    Flecha Abajo:Disminuir velocidad", 0, 15);
         g.drawString("Enter:Pausar animación  Liberar enter: Continuar animación", 0, 35);
-          g.drawString("Velocidad=" + this.velocidad, 0, 55);
+        g.drawString("Velocidad=" + this.velocidad, 0, 55);
     }
     
     @Override
@@ -58,9 +57,9 @@ public class Carro extends JPanel implements ActionListener, KeyListener{
             this.velocidad=0;
         }
         if(x<475){
-          this.x+=this.velocidad;    
+            this.x+=this.velocidad;    
         }else{
-          this.x=0;    
+            this.x=0;    
         }
         repaint();            
     }    
@@ -73,19 +72,17 @@ public class Carro extends JPanel implements ActionListener, KeyListener{
     @Override
     public void keyPressed(KeyEvent e){
         switch (e.getKeyCode()) {   
-              case KeyEvent.VK_UP: this.velocidad+=2; break;
-              case KeyEvent.VK_DOWN: this.velocidad-=2; break;
-              case KeyEvent.VK_ENTER: this.timer.stop(); break; 
+            case KeyEvent.VK_UP: this.velocidad+=2; break;
+            case KeyEvent.VK_DOWN: this.velocidad-=2; break;
+            case KeyEvent.VK_ENTER: this.timer.stop(); break; 
         }
         repaint();
     }
 
-
     @Override
     public void keyReleased(KeyEvent ke) {
-      switch (ke.getKeyCode()){
-          case KeyEvent.VK_ENTER: this.timer.start(); break;
-      }
+        switch (ke.getKeyCode()){
+            case KeyEvent.VK_ENTER: this.timer.start(); break;
+        }
     }
 }
-
