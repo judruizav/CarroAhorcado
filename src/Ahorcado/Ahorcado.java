@@ -2,6 +2,7 @@
 package Ahorcado;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import javax.swing.*;
 import java.awt.event.*;
@@ -36,9 +37,11 @@ public class Ahorcado extends JPanel implements ActionListener, KeyListener{
         g.drawRoundRect(220+x, 550+y, 420+x, 400+y, 150, 150);
         g.drawLine(320+x, 50+y, 320+x, 550+y);
         g.drawLine(320+x, 50+y, 550+x, 50+y);
-        g.drawString("P para pausar", 75, 43); 
-        g.drawString("S para reanudar", 75, 53); 
-        
+        g.setFont(new Font("Calibri", Font.ROMAN_BASELINE, 14));
+        g.drawString("Presione P para pausar", 25, 43);
+        g.drawString("Presione S para reanudar", 25, 63);
+        g.drawString("Presione Flecha Arriba para aumentar velocidad", 25, 83);
+        g.drawString("Presione Flecha Abajo para disminuir velocidad", 25, 103);
         switch(referenciaPosicion){
             //Hangman enumerado de izquierda a derecha de 0 a 4
             case 0: 
