@@ -36,7 +36,6 @@ public class Ahorcado extends JPanel implements ActionListener, KeyListener{
         g.drawRoundRect(220+x, 550+y, 420+x, 400+y, 150, 150);
         g.drawLine(320+x, 50+y, 320+x, 550+y);
         g.drawLine(320+x, 50+y, 550+x, 50+y);
-        g.drawString("Timer= " + this.delay, 75, 33); 
         g.drawString("P para pausar", 75, 43); 
         g.drawString("S para reanudar", 75, 53); 
         
