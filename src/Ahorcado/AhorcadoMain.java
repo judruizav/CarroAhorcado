@@ -15,7 +15,7 @@ public class AhorcadoMain {
         
         JFrame frame= new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(new Dimension(1200, 650));
+        frame.setSize(new Dimension(1000, 650));
         frame.setResizable(false);
         frame.setTitle("Animación Ahorcado");
         frame.add(new Ahorcado(0,25));
