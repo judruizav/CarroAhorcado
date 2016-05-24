@@ -44,9 +44,10 @@ public class Ahorcado extends JPanel implements ActionListener, KeyListener{
             //Hangman enumerado de izquierda a derecha de 0 a 4
             case 0: 
                 //Hangman 0
-                g.setColor(Color.YELLOW);
+                g.setColor(Color.BLACK);
                 //Soga
                 g.drawLine(550+x, 50+y, 465+x, 95+y);
+                g.setColor(Color.BLUE);
                 //Cabeza
                 g.drawOval(370+x, 70+y, 100, 100);
                 //Torso
@@ -62,9 +63,10 @@ public class Ahorcado extends JPanel implements ActionListener, KeyListener{
             break;
             case 1:
                 //Hangman 1
-                g.setColor(Color.GREEN);
+                g.setColor(Color.BLACK);
                 //Soga
                 g.drawLine(550+x, 50+y, 510+x, 130+y);
+                g.setColor(Color.RED);
                 //Cabeza
                 g.drawOval(430+x, 120+y, 100, 100);
                 //Torso
@@ -80,9 +82,10 @@ public class Ahorcado extends JPanel implements ActionListener, KeyListener{
             break;
             case 2:
                 //Hangman 2
-                g.setColor(Color.DARK_GRAY);   
+                g.setColor(Color.BLACK);   
                 //Soga
                 g.drawLine(550+x, 50+y, 550+x, 130+y);
+                g.setColor(Color.MAGENTA);
                 //Cabeza
                 g.drawOval(500+x, 130+y, 100, 100);
                 //Torso
@@ -98,9 +101,10 @@ public class Ahorcado extends JPanel implements ActionListener, KeyListener{
             break;
             case 3: 
                 //Hangman 3
-                g.setColor(Color.BLUE);
+                g.setColor(Color.BLACK);
                 //Soga
                 g.drawLine(550+x, 50+y, 598+x, 128+y);
+                g.setColor(Color.ORANGE);
                 //Cabeza
                 g.drawOval(570+x, 120+y, 100, 100);
                 //Torso
@@ -116,9 +120,10 @@ public class Ahorcado extends JPanel implements ActionListener, KeyListener{
             break;
             case 4:
                 //Hangman 4
-                g.setColor(Color.RED);
+                g.setColor(Color.BLACK);
                 //Soga
                 g.drawLine(550+x, 50+y, 625+x, 95+y);
+                g.setColor(Color.GREEN);
                 //Cabeza
                 g.drawOval(620+x, 70+y, 100, 100);
                 //Torso
@@ -137,9 +142,10 @@ public class Ahorcado extends JPanel implements ActionListener, KeyListener{
             //Hangman enumerado de izquierda a derecha de 0 a 4
             case 0: 
                 //Hangman 0
-                g.setColor(Color.YELLOW);
+                g.setColor(Color.BLACK);
                 //Soga
                 g.drawLine(550+x, 50+y, 465+x, 95+y);
+                g.setColor(Color.BLUE);
                 //Cabeza
                 g.drawOval(370+x, 70+y, 100, 100);
                 //Torso
@@ -155,9 +161,10 @@ public class Ahorcado extends JPanel implements ActionListener, KeyListener{
             break;
             case 1:
                 //Hangman 1
-                g.setColor(Color.GREEN);
+                g.setColor(Color.BLACK);
                 //Soga
                 g.drawLine(550+x, 50+y, 510+x, 130+y);
+                g.setColor(Color.RED);
                 //Cabeza
                 g.drawOval(430+x, 120+y, 100, 100);
                 //Torso
@@ -173,9 +180,10 @@ public class Ahorcado extends JPanel implements ActionListener, KeyListener{
             break;
             case 2:
                 //Hangman 2
-                g.setColor(Color.DARK_GRAY);   
+                g.setColor(Color.BLACK);   
                 //Soga
                 g.drawLine(550+x, 50+y, 550+x, 130+y);
+                g.setColor(Color.MAGENTA);
                 //Cabeza
                 g.drawOval(500+x, 130+y, 100, 100);
                 //Torso
@@ -191,9 +199,10 @@ public class Ahorcado extends JPanel implements ActionListener, KeyListener{
             break;
             case 3: 
                 //Hangman 3
-                g.setColor(Color.BLUE);
+                g.setColor(Color.BLACK);
                 //Soga
                 g.drawLine(550+x, 50+y, 598+x, 128+y);
+                g.setColor(Color.ORANGE);
                 //Cabeza
                 g.drawOval(570+x, 120+y, 100, 100);
                 //Torso
@@ -209,9 +218,10 @@ public class Ahorcado extends JPanel implements ActionListener, KeyListener{
             break;
             case 4:
                 //Hangman 4
-                g.setColor(Color.RED);
+                g.setColor(Color.BLACK);
                 //Soga
                 g.drawLine(550+x, 50+y, 625+x, 95+y);
+                g.setColor(Color.GREEN);
                 //Cabeza
                 g.drawOval(620+x, 70+y, 100, 100);
                 //Torso
@@ -253,8 +263,8 @@ public class Ahorcado extends JPanel implements ActionListener, KeyListener{
     @Override
     public void keyPressed(KeyEvent ke) {
         switch(ke.getKeyCode()){
-            case KeyEvent.VK_UP: this.timer.setDelay(delay-=50); break;
-            case KeyEvent.VK_DOWN: this.timer.setDelay(delay+=50); break;
+            case KeyEvent.VK_UP: this.timer.setDelay(delay-=25); break;
+            case KeyEvent.VK_DOWN: this.timer.setDelay(delay+=25); break;
             case KeyEvent.VK_P: this.timer.stop(); break;
             case KeyEvent.VK_S: this.timer.start(); break;            
         }
